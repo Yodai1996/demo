@@ -5,7 +5,7 @@ const WINNING_PATTERNS = [
 ];
 
 let board = Array(9).fill(null);
-let currentPlayer = 'X';
+let currentPlayer = 'O';
 let gameOver = false;
 
 const cells = document.querySelectorAll('.cell');
@@ -72,9 +72,9 @@ function render() {
 
 function resetGame() {
   board = Array(9).fill(null);
-  currentPlayer = 'X';
+  currentPlayer = 'O';
   gameOver = false;
-  status.textContent = 'X の番です';
+  status.textContent = 'O の番です';
   cells.forEach(cell => {
     cell.textContent = '';
     cell.className = 'cell';
